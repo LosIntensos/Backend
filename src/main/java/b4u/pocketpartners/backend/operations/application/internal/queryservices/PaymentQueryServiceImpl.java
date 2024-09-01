@@ -1,9 +1,9 @@
-package fairfinance.pocketpartners.backend.operations.application.internal.queryservices;
+package b4u.pocketpartners.backend.operations.application.internal.queryservices;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.aggregates.Payment;
-import fairfinance.pocketpartners.backend.operations.domain.model.queries.*;
-import fairfinance.pocketpartners.backend.operations.domain.services.PaymentQueryService;
-import fairfinance.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.PaymentRepository;
+import b4u.pocketpartners.backend.operations.domain.model.aggregates.Payment;
+import b4u.pocketpartners.backend.operations.domain.model.queries.*;
+import b4u.pocketpartners.backend.operations.domain.services.PaymentQueryService;
+import b4u.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.PaymentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,7 +29,7 @@ public class PaymentQueryServiceImpl implements PaymentQueryService {
     }
 
     @Override
-    public List<Payment> handle(GetAllPaymentsByUserInformationIdQuery query){
+        public List<Payment> handle(GetAllPaymentsByUserInformationIdQuery query){
         return paymentRepository.findAllByUserInformationId(query.userInformationId());
     }
 

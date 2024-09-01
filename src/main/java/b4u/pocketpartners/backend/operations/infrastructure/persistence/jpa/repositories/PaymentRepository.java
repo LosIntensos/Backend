@@ -1,7 +1,7 @@
-package fairfinance.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories;
+package b4u.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.aggregates.Payment;
-import fairfinance.pocketpartners.backend.operations.domain.model.valueobjects.PaymentStatus;
+import b4u.pocketpartners.backend.operations.domain.model.aggregates.Payment;
+import b4u.pocketpartners.backend.operations.domain.model.valueobjects.PaymentStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

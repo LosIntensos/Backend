@@ -1,7 +1,7 @@
-package fairfinance.pocketpartners.backend.operations.interfaces.rest.transform;
+package b4u.pocketpartners.backend.operations.interfaces.rest.transform;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.aggregates.Expense;
-import fairfinance.pocketpartners.backend.operations.interfaces.rest.resources.ExpenseResource;
+import b4u.pocketpartners.backend.operations.domain.model.aggregates.Expense;
+import b4u.pocketpartners.backend.operations.interfaces.rest.resources.ExpenseResource;
 
 public class ExpenseResourceFromEntityAssembler {
     public static ExpenseResource toResourceFromEntity(Expense expense){

@@ -1,7 +1,7 @@
 package b4u.pocketpartners.backend.groups.interfaces.rest.transform;
 
-import fairfinance.pocketpartners.backend.groups.domain.model.aggregates.GroupOperation;
-import fairfinance.pocketpartners.backend.groups.interfaces.rest.resources.GroupOperationResource;
+import b4u.pocketpartners.backend.groups.domain.model.aggregates.GroupOperation;
+import b4u.pocketpartners.backend.groups.interfaces.rest.resources.GroupOperationResource;
 
 public class GroupOperationResourceFromEntityAssembler {
     public static GroupOperationResource toResourceFromEntity(GroupOperation groupOperation) {

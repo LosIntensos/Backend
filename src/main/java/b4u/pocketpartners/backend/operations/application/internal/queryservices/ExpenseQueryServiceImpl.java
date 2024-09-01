@@ -1,9 +1,9 @@
-package fairfinance.pocketpartners.backend.operations.application.internal.queryservices;
+package b4u.pocketpartners.backend.operations.application.internal.queryservices;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.aggregates.Expense;
-import fairfinance.pocketpartners.backend.operations.domain.model.queries.*;
-import fairfinance.pocketpartners.backend.operations.domain.services.ExpenseQueryService;
-import fairfinance.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.ExpenseRepository;
+import b4u.pocketpartners.backend.operations.domain.model.aggregates.Expense;
+import b4u.pocketpartners.backend.operations.domain.model.queries.*;
+import b4u.pocketpartners.backend.operations.domain.services.ExpenseQueryService;
+import b4u.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.ExpenseRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

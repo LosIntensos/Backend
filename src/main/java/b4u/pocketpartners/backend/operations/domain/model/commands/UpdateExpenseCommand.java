@@ -1,4 +1,4 @@
-package fairfinance.pocketpartners.backend.operations.domain.model.commands;
+package b4u.pocketpartners.backend.operations.domain.model.commands;
 
 import java.math.BigDecimal;
 

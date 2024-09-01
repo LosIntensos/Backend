@@ -1,7 +1,7 @@
 package b4u.pocketpartners.backend.groups.interfaces.rest.transform;
 
-import fairfinance.pocketpartners.backend.groups.domain.model.aggregates.Group;
-import fairfinance.pocketpartners.backend.groups.interfaces.rest.resources.GroupResource;
+import b4u.pocketpartners.backend.groups.domain.model.aggregates.Group;
+import b4u.pocketpartners.backend.groups.interfaces.rest.resources.GroupResource;
 
 public class GroupResourceFromEntityAssembler {
     public static GroupResource toResourceFromEntity(Group group) {

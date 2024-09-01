@@ -1,15 +1,15 @@
-package fairfinance.pocketpartners.backend.operations.interfaces.rest;
+package b4u.pocketpartners.backend.operations.interfaces.rest;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.commands.CompletePaymentCommand;
-import fairfinance.pocketpartners.backend.operations.domain.model.queries.*;
-import fairfinance.pocketpartners.backend.operations.domain.model.valueobjects.PaymentStatus;
-import fairfinance.pocketpartners.backend.operations.domain.services.PaymentCommandService;
-import fairfinance.pocketpartners.backend.operations.domain.services.PaymentQueryService;
-import fairfinance.pocketpartners.backend.operations.interfaces.rest.resources.CreatePaymentResource;
-import fairfinance.pocketpartners.backend.operations.interfaces.rest.resources.PaymentResource;
-import fairfinance.pocketpartners.backend.operations.interfaces.rest.transform.CreatePaymentCommandFromResourceAssembler;
-import fairfinance.pocketpartners.backend.operations.interfaces.rest.transform.PaymentResourceFromEntityAssembler;
-import fairfinance.pocketpartners.backend.shared.interfaces.rest.resources.MessageResource;
+import b4u.pocketpartners.backend.operations.domain.model.commands.CompletePaymentCommand;
+import b4u.pocketpartners.backend.operations.domain.model.queries.*;
+import b4u.pocketpartners.backend.operations.domain.model.valueobjects.PaymentStatus;
+import b4u.pocketpartners.backend.operations.domain.services.PaymentCommandService;
+import b4u.pocketpartners.backend.operations.domain.services.PaymentQueryService;
+import b4u.pocketpartners.backend.operations.interfaces.rest.resources.CreatePaymentResource;
+import b4u.pocketpartners.backend.operations.interfaces.rest.resources.PaymentResource;
+import b4u.pocketpartners.backend.operations.interfaces.rest.transform.CreatePaymentCommandFromResourceAssembler;
+import b4u.pocketpartners.backend.operations.interfaces.rest.transform.PaymentResourceFromEntityAssembler;
+import b4u.pocketpartners.backend.shared.interfaces.rest.resources.MessageResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

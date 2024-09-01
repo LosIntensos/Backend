@@ -1,14 +1,14 @@
-package fairfinance.pocketpartners.backend.operations.application.internal.commandservices;
+package b4u.pocketpartners.backend.operations.application.internal.commandservices;
 
-import fairfinance.pocketpartners.backend.groups.domain.model.aggregates.Group;
-import fairfinance.pocketpartners.backend.groups.infrastructure.persistence.jpa.repositories.GroupRepository;
-import fairfinance.pocketpartners.backend.operations.domain.model.aggregates.Expense;
-import fairfinance.pocketpartners.backend.operations.domain.model.commands.CreateExpenseCommand;
-import fairfinance.pocketpartners.backend.operations.domain.model.commands.UpdateExpenseCommand;
-import fairfinance.pocketpartners.backend.operations.domain.services.ExpenseCommandService;
-import fairfinance.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.ExpenseRepository;
-import fairfinance.pocketpartners.backend.users.domain.model.aggregates.UserInformation;
-import fairfinance.pocketpartners.backend.users.infrastructure.persistence.jpa.repositories.UserInformationRepository;
+import b4u.pocketpartners.backend.groups.domain.model.aggregates.Group;
+import b4u.pocketpartners.backend.groups.infrastructure.persistence.jpa.repositories.GroupRepository;
+import b4u.pocketpartners.backend.operations.domain.model.aggregates.Expense;
+import b4u.pocketpartners.backend.operations.domain.model.commands.CreateExpenseCommand;
+import b4u.pocketpartners.backend.operations.domain.model.commands.UpdateExpenseCommand;
+import b4u.pocketpartners.backend.operations.domain.services.ExpenseCommandService;
+import b4u.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.ExpenseRepository;
+import b4u.pocketpartners.backend.users.domain.model.aggregates.UserInformation;
+import b4u.pocketpartners.backend.users.infrastructure.persistence.jpa.repositories.UserInformationRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

@@ -1,7 +1,7 @@
 package b4u.pocketpartners.backend.groups.interfaces.rest.transform;
 
-import fairfinance.pocketpartners.backend.groups.domain.model.commands.AddGroupOperationCommand;
-import fairfinance.pocketpartners.backend.groups.interfaces.rest.resources.AddGroupOperationResource;
+import b4u.pocketpartners.backend.groups.domain.model.commands.AddGroupOperationCommand;
+import b4u.pocketpartners.backend.groups.interfaces.rest.resources.AddGroupOperationResource;
 
 public class AddGroupOperationCommandFromResourceAssembler {
     public static AddGroupOperationCommand toCommandFromResource(AddGroupOperationResource resource) {

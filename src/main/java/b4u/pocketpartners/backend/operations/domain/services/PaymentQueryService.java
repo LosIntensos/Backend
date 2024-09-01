@@ -1,7 +1,7 @@
-package fairfinance.pocketpartners.backend.operations.domain.services;
+package b4u.pocketpartners.backend.operations.domain.services;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.aggregates.Payment;
-import fairfinance.pocketpartners.backend.operations.domain.model.queries.*;
+import b4u.pocketpartners.backend.operations.domain.model.aggregates.Payment;
+import b4u.pocketpartners.backend.operations.domain.model.queries.*;
 
 import java.util.List;
 import java.util.Optional;

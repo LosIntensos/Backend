@@ -1,4 +1,4 @@
-package fairfinance.pocketpartners.backend.operations.interfaces.rest.resources;
+package b4u.pocketpartners.backend.operations.interfaces.rest.resources;
 
 import jakarta.validation.constraints.NotNull;
 
