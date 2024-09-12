@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(value = "api/v1/groupOperations", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "GroupOperations",description = "Group Operations Management Endpoint")
 public class GroupOperationsController {

@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(value = "api/v1/groups", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "Group", description = "Group Management Endpoints")
 public class GroupController {

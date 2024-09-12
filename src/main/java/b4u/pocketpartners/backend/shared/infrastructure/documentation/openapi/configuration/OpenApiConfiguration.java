@@ -18,13 +18,13 @@ public class OpenApiConfiguration {
         var openApi = new OpenAPI();
         openApi
                 .info(new Info()
-                        .title("b4u Pocket Partners API")
-                        .description("b4u Pocket Partners application REST API documentation.")
+                        .title("B4U Pocket Partners API")
+                        .description("B4U Pocket Partners application REST API documentation.")
                         .version("v1.0.0")
                         .license(new License().name("Apache 2.0")
                                 .url("https://springdoc.org")))
                 .externalDocs(new ExternalDocumentation()
-                        .description("b4u Pocket Partners wiki Documentation")
+                        .description("B4U Pocket Partners wiki Documentation")
                         .url("https://github.com/PocketPartners/Informe"));
 
         final String securitySchemeName = "bearerAuth";

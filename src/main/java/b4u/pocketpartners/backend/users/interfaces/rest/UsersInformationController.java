@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping(value = "/api/v1/usersInformation", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "Users Information", description = "User Information Management Endpoints")
 public class UsersInformationController {
