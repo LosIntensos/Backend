@@ -1,15 +1,15 @@
-package fairfinance.pocketpartners.backend.operations.application.internal.commandservices;
+package b4u.pocketpartners.backend.operations.application.internal.commandservices;
 
-import fairfinance.pocketpartners.backend.operations.domain.exceptions.UserNotFoundException;
-import fairfinance.pocketpartners.backend.operations.domain.model.aggregates.Payment;
-import fairfinance.pocketpartners.backend.operations.domain.model.commands.CompletePaymentCommand;
-import fairfinance.pocketpartners.backend.operations.domain.model.commands.CreatePaymentCommand;
-import fairfinance.pocketpartners.backend.operations.domain.services.PaymentCommandService;
-import fairfinance.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.ExpenseRepository;
-import fairfinance.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.PaymentRepository;
-import fairfinance.pocketpartners.backend.users.domain.model.aggregates.UserInformation;
-import fairfinance.pocketpartners.backend.users.infrastructure.persistence.jpa.repositories.UserInformationRepository;
-import fairfinance.pocketpartners.backend.users.infrastructure.persistence.jpa.repositories.UserRepository;
+import b4u.pocketpartners.backend.operations.domain.exceptions.UserNotFoundException;
+import b4u.pocketpartners.backend.operations.domain.model.aggregates.Payment;
+import b4u.pocketpartners.backend.operations.domain.model.commands.CompletePaymentCommand;
+import b4u.pocketpartners.backend.operations.domain.model.commands.CreatePaymentCommand;
+import b4u.pocketpartners.backend.operations.domain.services.PaymentCommandService;
+import b4u.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.ExpenseRepository;
+import b4u.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.PaymentRepository;
+import b4u.pocketpartners.backend.users.domain.model.aggregates.UserInformation;
+import b4u.pocketpartners.backend.users.infrastructure.persistence.jpa.repositories.UserInformationRepository;
+import b4u.pocketpartners.backend.users.infrastructure.persistence.jpa.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service

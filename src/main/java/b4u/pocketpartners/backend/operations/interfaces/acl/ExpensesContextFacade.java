@@ -1,7 +1,7 @@
-package fairfinance.pocketpartners.backend.operations.interfaces.acl;
+package b4u.pocketpartners.backend.operations.interfaces.acl;
 
-import fairfinance.pocketpartners.backend.operations.domain.services.ExpenseCommandService;
-import fairfinance.pocketpartners.backend.operations.domain.services.ExpenseQueryService;
+import b4u.pocketpartners.backend.operations.domain.services.ExpenseCommandService;
+import b4u.pocketpartners.backend.operations.domain.services.ExpenseQueryService;
 import org.springframework.stereotype.Service;
 
 @Service

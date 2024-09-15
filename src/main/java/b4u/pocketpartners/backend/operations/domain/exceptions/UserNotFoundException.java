@@ -1,4 +1,4 @@
-package fairfinance.pocketpartners.backend.operations.domain.exceptions;
+package b4u.pocketpartners.backend.operations.domain.exceptions;
 
 public class UserNotFoundException extends RuntimeException {
     public UserNotFoundException(Long aLong) {

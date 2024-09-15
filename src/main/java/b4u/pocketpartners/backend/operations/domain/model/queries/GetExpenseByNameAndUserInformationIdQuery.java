@@ -1,6 +1,6 @@
-package fairfinance.pocketpartners.backend.operations.domain.model.queries;
+package b4u.pocketpartners.backend.operations.domain.model.queries;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.valueobjects.ExpenseName;
+import b4u.pocketpartners.backend.operations.domain.model.valueobjects.ExpenseName;
 
 public record GetExpenseByNameAndUserInformationIdQuery(ExpenseName expenseName, Long userInformationId) {
 }

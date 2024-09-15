@@ -1,7 +1,7 @@
-package fairfinance.pocketpartners.backend.operations.interfaces.rest.transform;
+package b4u.pocketpartners.backend.operations.interfaces.rest.transform;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.commands.UpdateExpenseCommand;
-import fairfinance.pocketpartners.backend.operations.interfaces.rest.resources.UpdateExpenseResource;
+import b4u.pocketpartners.backend.operations.domain.model.commands.UpdateExpenseCommand;
+import b4u.pocketpartners.backend.operations.interfaces.rest.resources.UpdateExpenseResource;
 
 public class UpdateExpenseCommandFromResourceAssembler {
     public static UpdateExpenseCommand toCommandFromResource(Long expenseId, UpdateExpenseResource resource) {

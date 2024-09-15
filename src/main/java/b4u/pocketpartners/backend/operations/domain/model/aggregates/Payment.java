@@ -1,10 +1,10 @@
-package fairfinance.pocketpartners.backend.operations.domain.model.aggregates;
+package b4u.pocketpartners.backend.operations.domain.model.aggregates;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.valueobjects.Amount;
-import fairfinance.pocketpartners.backend.operations.domain.model.valueobjects.Description;
-import fairfinance.pocketpartners.backend.operations.domain.model.valueobjects.PaymentStatus;
-import fairfinance.pocketpartners.backend.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
-import fairfinance.pocketpartners.backend.users.domain.model.aggregates.UserInformation;
+import b4u.pocketpartners.backend.operations.domain.model.valueobjects.Amount;
+import b4u.pocketpartners.backend.operations.domain.model.valueobjects.Description;
+import b4u.pocketpartners.backend.operations.domain.model.valueobjects.PaymentStatus;
+import b4u.pocketpartners.backend.shared.domain.model.aggregates.AuditableAbstractAggregateRoot;
+import b4u.pocketpartners.backend.users.domain.model.aggregates.UserInformation;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;

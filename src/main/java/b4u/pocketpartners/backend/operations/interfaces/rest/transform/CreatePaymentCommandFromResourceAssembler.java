@@ -1,7 +1,7 @@
-package fairfinance.pocketpartners.backend.operations.interfaces.rest.transform;
+package b4u.pocketpartners.backend.operations.interfaces.rest.transform;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.commands.CreatePaymentCommand;
-import fairfinance.pocketpartners.backend.operations.interfaces.rest.resources.CreatePaymentResource;
+import b4u.pocketpartners.backend.operations.domain.model.commands.CreatePaymentCommand;
+import b4u.pocketpartners.backend.operations.interfaces.rest.resources.CreatePaymentResource;
 
 public class CreatePaymentCommandFromResourceAssembler {
     public static CreatePaymentCommand toCommandFromResource(CreatePaymentResource resource) {

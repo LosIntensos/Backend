@@ -1,8 +1,8 @@
-package fairfinance.pocketpartners.backend.operations.domain.services;
+package b4u.pocketpartners.backend.operations.domain.services;
 
-import fairfinance.pocketpartners.backend.operations.domain.model.aggregates.Expense;
-import fairfinance.pocketpartners.backend.operations.domain.model.commands.CreateExpenseCommand;
-import fairfinance.pocketpartners.backend.operations.domain.model.commands.UpdateExpenseCommand;
+import b4u.pocketpartners.backend.operations.domain.model.aggregates.Expense;
+import b4u.pocketpartners.backend.operations.domain.model.commands.CreateExpenseCommand;
+import b4u.pocketpartners.backend.operations.domain.model.commands.UpdateExpenseCommand;
 
 import java.util.Optional;
 
