@@ -1,5 +1,6 @@
 package b4u.pocketpartners.backend.operations.interfaces.rest;
 
+import b4u.pocketpartners.backend.operations.domain.model.commands.DeleteExpenseCommand;
 import b4u.pocketpartners.backend.operations.domain.model.queries.GetAllExpensesByGroupIdQuery;
 import b4u.pocketpartners.backend.operations.domain.model.queries.GetAllExpensesByUserInformationIdQuery;
 import b4u.pocketpartners.backend.operations.domain.model.queries.GetAllExpensesQuery;
@@ -90,4 +91,13 @@ public class ExpensesController {
         var expenseResources = expenses.stream().map(ExpenseResourceFromEntityAssembler::toResourceFromEntity).toList();
         return ResponseEntity.ok(expenseResources);
     }
+
+    @DeleteMapping("expenseId/{expenseId}")
+    public ResponseEntity<Void> deleteExpense(@PathVariable Long expenseId) {
+        var deleteExpenseCommand = new DeleteExpenseCommand(expenseId);
+        expenseCommandService.handle(deleteExpenseCommand);
+        return ResponseEntity.noContent().build();
+    }
+
+
 }

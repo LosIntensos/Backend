@@ -1,10 +1,7 @@
 package b4u.pocketpartners.backend.groups.application.internal.queryservices;
 
 import b4u.pocketpartners.backend.groups.domain.model.aggregates.GroupOperation;
-import b4u.pocketpartners.backend.groups.domain.model.queries.GetAllGroupOperationsByGroupIdQuery;
-import b4u.pocketpartners.backend.groups.domain.model.queries.GetAllGroupOperationsQuery;
-import b4u.pocketpartners.backend.groups.domain.model.queries.GetGroupOperationByGroupIdAndExpenseIdAndPaymentId;
-import b4u.pocketpartners.backend.groups.domain.model.queries.GetGroupOperationByIdQuery;
+import b4u.pocketpartners.backend.groups.domain.model.queries.*;
 import b4u.pocketpartners.backend.groups.domain.services.GroupOperationQueryService;
 import b4u.pocketpartners.backend.groups.infrastructure.persistence.jpa.repositories.GroupOperationRepository;
 import org.springframework.stereotype.Service;
@@ -37,4 +34,13 @@ public class GroupOperationQueryServiceImpl implements GroupOperationQueryServic
     public Optional<GroupOperation> handle(GetGroupOperationByGroupIdAndExpenseIdAndPaymentId query){
         return groupOperationRepository.findByGroupIdAndExpenseIdAndPaymentId(query.groupId(), query.expenseId(), query.paymentId());
     }
+
+    @Override
+    public List<GroupOperation> handle(GetAllGroupOperationByExpenseIdQuery query) {
+        return groupOperationRepository.findByExpenseId(query.expenseId());
+    }
+
+
+
+
 }

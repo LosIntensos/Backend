@@ -11,4 +11,5 @@ import java.util.Optional;
 public interface GroupOperationRepository extends JpaRepository<GroupOperation, Long> {
     List<GroupOperation> findAllByGroupId(Long groupId);
     Optional<GroupOperation> findByGroupIdAndExpenseIdAndPaymentId(Long groupId, Long expenseId, Long paymentId);
+    List<GroupOperation> findByExpenseId(Long expenseId);
 }
