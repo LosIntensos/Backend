@@ -9,7 +9,6 @@ import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 
 import java.math.BigDecimal;
@@ -43,8 +42,7 @@ public class Expense extends AuditableAbstractAggregateRoot<Expense> {
     public Expense() {}
 
     public void UpdateExpenseName(String newName){this.name = new ExpenseName(newName);}
-
-    public void UpdateAmount(BigDecimal newAmount){this.amount = new Amount(newAmount);}
+  public void UpdateAmount(BigDecimal newAmount){this.amount = new Amount(newAmount);}
 
     public Expense UpdateInformation(String newName, BigDecimal newAmount){
         this.name = new ExpenseName(newName);
