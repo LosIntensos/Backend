@@ -4,6 +4,7 @@ import b4u.pocketpartners.backend.users.domain.model.commands.DeleteUserInformat
 import b4u.pocketpartners.backend.users.domain.model.queries.GetAllUsersInformationQuery;
 import b4u.pocketpartners.backend.users.domain.model.queries.GetUserInformationByIdQuery;
 import b4u.pocketpartners.backend.users.domain.model.queries.GetUserInformationByUserIdQuery;
+import b4u.pocketpartners.backend.users.domain.services.EmailService;
 import b4u.pocketpartners.backend.users.domain.services.UserInformationCommandService;
 import b4u.pocketpartners.backend.users.domain.services.UserInformationQueryService;
 import b4u.pocketpartners.backend.users.interfaces.rest.resources.CreateUserInformationResource;
@@ -16,6 +17,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.mail.MessagingException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +32,8 @@ import java.util.stream.Collectors;
 @RequestMapping(value = "/api/v1/usersInformation", produces = MediaType.APPLICATION_JSON_VALUE)
 @Tag(name = "Users Information", description = "User Information Management Endpoints")
 public class UsersInformationController {
-
+    @Autowired
+     private EmailService emailService;
     private final UserInformationQueryService userInformationQueryService;
     private final UserInformationCommandService userInformationCommandService;
 
@@ -45,11 +49,16 @@ public class UsersInformationController {
             @ApiResponse(responseCode = "400", description = "Bad request")
     })
     @PostMapping
-    public ResponseEntity<UserInformationResource> createUser(@RequestBody CreateUserInformationResource resource) {
+    public ResponseEntity<UserInformationResource> createUser(@RequestBody CreateUserInformationResource resource){
         var createUserCommand = CreateUserInformationCommandFromResourceAssembler.toCommandfromResource(resource);
         var user = userInformationCommandService.handle(createUserCommand);
         if (user.isEmpty()) return ResponseEntity.badRequest().build();
         var userResource = UserInformationResourceFromEntityAssembler.toResourceFromEntity(user.get());
+        try {
+            emailService.sendWelcomeEmail(userResource.email(), userResource.fullName());
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
         return new ResponseEntity<>(userResource, HttpStatus.CREATED);
     }
 
