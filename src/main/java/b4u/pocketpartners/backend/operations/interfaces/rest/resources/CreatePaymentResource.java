@@ -12,8 +12,6 @@ public record CreatePaymentResource(@NotNull
                                     @NotNull
                                     Long userId,
                                     @NotNull
-                                    Long expenseId,
-                                    @NotNull
-                                    LocalDate dueDate
+                                    Long expenseId
 ) {
 }

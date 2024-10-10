@@ -47,7 +47,7 @@ public class ExpenseCommandServiceImpl implements ExpenseCommandService {
         if (user.isEmpty()) {
             throw new IllegalArgumentException("User not found");
         }
-        Expense expense = new Expense(command.name(), command.amount(), user.get(), group.get());
+        Expense expense = new Expense(command.name(), command.amount(), user.get(), group.get(), command.dueDate());
         expenseRepository.save(expense);
         return expenseRepository.findById(expense.getId());
     }
@@ -58,7 +58,7 @@ public class ExpenseCommandServiceImpl implements ExpenseCommandService {
         if (result.isEmpty()) {throw new IllegalArgumentException("Expense not found");}
         var expenseToUpdate = result.get();
         try {
-            var updateExpense = expenseRepository.save(expenseToUpdate.UpdateInformation(command.name(), command.amount()));
+            var updateExpense = expenseRepository.save(expenseToUpdate.UpdateInformation(command.name(), command.amount(), command.dueDate()));
             return Optional.of(updateExpense);
         }catch (Exception e) {
             throw new IllegalArgumentException("Error while updating expense: " + e.getMessage());

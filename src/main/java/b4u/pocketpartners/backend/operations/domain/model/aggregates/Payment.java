@@ -10,7 +10,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 @Entity
 public class Payment extends AuditableAbstractAggregateRoot<Payment> {
@@ -35,25 +34,19 @@ public class Payment extends AuditableAbstractAggregateRoot<Payment> {
     @JoinColumn(name = "expense_id")
     private Expense expense;
 
-    @Getter
-    @Embedded
-    private DueDate dueDate;
-
     public Payment() {}
 
-    public Payment(String description, BigDecimal amount, UserInformation userInformation, Expense expense, LocalDate dueDate) {
+    public Payment(String description, BigDecimal amount, UserInformation userInformation, Expense expense) {
         this.description = new Description(description);
         this.amount = new Amount(amount);
         this.status = PaymentStatus.PENDING;
         this.userInformation = userInformation;
         this.expense = expense;
-        this.dueDate = new DueDate(dueDate);
     }
 
-    public Payment UpdateInformation(String newDescription, BigDecimal newAmount, LocalDate newDueDate){
+    public Payment UpdateInformation(String newDescription, BigDecimal newAmount){
         this.description = new Description(newDescription);
         this.amount = new Amount(newAmount);
-        this.dueDate = new DueDate(newDueDate);
         return this;
     }
 
@@ -67,9 +60,6 @@ public class Payment extends AuditableAbstractAggregateRoot<Payment> {
 
     public String getStatus(){return this.status.name().toLowerCase();}
 
-    public LocalDate getDueDate()
-    {
-        return dueDate.getDueDate();
-    }
+
 }
 
