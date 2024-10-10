@@ -11,14 +11,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class ScheduledTasks {
 
-    private final ExpensesNotificationService paymentNotificationService;
+    private final ExpensesNotificationService expensesNotificationService;
 
-    public ScheduledTasks(ExpensesNotificationService paymentNotificationService) {
-        this.paymentNotificationService = paymentNotificationService;
+    public ScheduledTasks(ExpensesNotificationService expensesNotificationService) {
+        this.expensesNotificationService = expensesNotificationService;
     }
 
-    @Scheduled(cron = "0 0 9,17 * * ?") // Ejecutar a las 9:00 AM y 5:00 PM
-    public void sendDailyPaymentReminders() {
-        paymentNotificationService.sendPaymentReminders();
-    }
+    //NO LO ACTIVO A MENOS Q LO NECESITE CONSUME MI DINERITO DE TWILIO
+    //@Scheduled(cron = "0 0 9,17 * * ?", zone = "America/Lima") // Ejecutar a las 9:00 AM y 5:00 PM
+    //public void sendDailyPaymentReminders() {
+        //expensesNotificationService.sendPaymentReminders();
+    //}
 }

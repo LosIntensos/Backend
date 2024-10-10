@@ -4,12 +4,14 @@ import b4u.pocketpartners.backend.operations.domain.model.aggregates.Expense;
 import b4u.pocketpartners.backend.operations.domain.model.queries.GetAllExpensesByDueDate;
 import b4u.pocketpartners.backend.users.domain.model.aggregates.UserInformation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Service
+@EnableScheduling
 public class ExpensesNotificationService {
 
     private final ExpenseQueryService expenseQueryService;

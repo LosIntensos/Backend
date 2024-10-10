@@ -1,6 +1,7 @@
 package b4u.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories;
 
 import b4u.pocketpartners.backend.operations.domain.model.aggregates.Expense;
+import b4u.pocketpartners.backend.operations.domain.model.valueobjects.DueDate;
 import b4u.pocketpartners.backend.operations.domain.model.valueobjects.ExpenseName;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -15,5 +16,5 @@ public interface ExpenseRepository extends JpaRepository<Expense, Long> {
     Optional<Expense> findByNameAndId(ExpenseName name, Long userId);
     List<Expense> findByUserInformationId(Long userInformationId);
     List<Expense> findByGroupId(Long groupId);
-    List<Expense> findAllByDueDate(LocalDate dueDate);
+    List<Expense> findAllByDueDate(DueDate dueDate);
 }

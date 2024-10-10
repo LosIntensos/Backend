@@ -3,10 +3,12 @@ package b4u.pocketpartners.backend.operations.application.internal.queryservices
 import b4u.pocketpartners.backend.operations.domain.model.aggregates.Expense;
 import b4u.pocketpartners.backend.operations.domain.model.aggregates.Payment;
 import b4u.pocketpartners.backend.operations.domain.model.queries.*;
+import b4u.pocketpartners.backend.operations.domain.model.valueobjects.DueDate;
 import b4u.pocketpartners.backend.operations.domain.services.ExpenseQueryService;
 import b4u.pocketpartners.backend.operations.infrastructure.persistence.jpa.repositories.ExpenseRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -44,6 +46,9 @@ public class ExpenseQueryServiceImpl implements ExpenseQueryService {
 
     @Override
     public List<Expense> handle(GetAllExpensesByDueDate query) {
-        return expenseRepository.findAllByDueDate(query.dueDate());
+        LocalDate localDate = query.dueDate();
+        DueDate dueDate = new DueDate(localDate);
+        return expenseRepository.findAllByDueDate(dueDate);
     }
+
 }

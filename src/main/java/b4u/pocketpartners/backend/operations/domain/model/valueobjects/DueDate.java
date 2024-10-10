@@ -25,7 +25,12 @@ public record DueDate(LocalDate dueDate) {
         return LocalDate.now().isAfter(this.dueDate);
     }
 
+    public long daysRemaining() {
+        return LocalDate.now().until(dueDate).getDays();
+    }
+
     public LocalDate getDueDate() {
         return dueDate;
     }
 }
+
