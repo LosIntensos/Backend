@@ -5,6 +5,6 @@ import b4u.pocketpartners.backend.operations.interfaces.rest.resources.UpdateExp
 
 public class UpdateExpenseCommandFromResourceAssembler {
     public static UpdateExpenseCommand toCommandFromResource(Long expenseId, UpdateExpenseResource resource) {
-        return new UpdateExpenseCommand(expenseId, resource.name(), resource.amount());
+        return new UpdateExpenseCommand(expenseId, resource.name(), resource.amount(), resource.dueDate());
     }
 }

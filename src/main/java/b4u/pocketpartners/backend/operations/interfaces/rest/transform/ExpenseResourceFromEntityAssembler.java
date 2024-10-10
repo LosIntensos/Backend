@@ -5,6 +5,6 @@ import b4u.pocketpartners.backend.operations.interfaces.rest.resources.ExpenseRe
 
 public class ExpenseResourceFromEntityAssembler {
     public static ExpenseResource toResourceFromEntity(Expense expense){
-        return new ExpenseResource(expense.getId(), expense.getName(), expense.getAmount(), expense.getUserInformation().getId(), expense.getGroup().getId(), expense.getCreatedAt(), expense.getUpdatedAt());
+        return new ExpenseResource(expense.getId(), expense.getName(), expense.getAmount(), expense.getUserInformation().getId(), expense.getGroup().getId(), expense.getDueDate(), expense.getCreatedAt(), expense.getUpdatedAt());
     }
 }
