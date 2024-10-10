@@ -17,6 +17,10 @@ public record DueDate(LocalDate dueDate) {
         }
     }
 
+    public boolean isDueSoon() {
+        return dueDate.minusDays(1).isBefore(LocalDate.now());
+    }
+
     public boolean isOverdue() {
         return LocalDate.now().isAfter(this.dueDate);
     }

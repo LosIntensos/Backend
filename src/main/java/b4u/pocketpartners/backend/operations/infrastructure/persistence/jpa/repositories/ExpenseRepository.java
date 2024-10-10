@@ -5,6 +5,7 @@ import b4u.pocketpartners.backend.operations.domain.model.valueobjects.ExpenseNa
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,4 +15,5 @@ public interface ExpenseRepository extends JpaRepository<Expense, Long> {
     Optional<Expense> findByNameAndId(ExpenseName name, Long userId);
     List<Expense> findByUserInformationId(Long userInformationId);
     List<Expense> findByGroupId(Long groupId);
+    List<Expense> findAllByDueDate(LocalDate dueDate);
 }

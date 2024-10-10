@@ -5,6 +5,6 @@ import b4u.pocketpartners.backend.operations.interfaces.rest.resources.CreateExp
 
 public class CreateExpenseCommandFromResourceAssembler {
     public static CreateExpenseCommand toCommandFromResource(CreateExpenseResource resource) {
-        return new CreateExpenseCommand(resource.name(), resource.amount(), resource.userId(), resource.groupId());
+        return new CreateExpenseCommand(resource.name(), resource.amount(), resource.userId(), resource.groupId(), resource.dueDate());
     }
 }

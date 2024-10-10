@@ -29,7 +29,7 @@ public class PaymentCommandServiceImpl implements PaymentCommandService {
     public Long handle(CreatePaymentCommand command) {
         expenseRepository.findById(command.expenseId()).map(expense -> {
             UserInformation userInformation = userInformationRepository.findById(command.userId()).orElseThrow(() -> new UserNotFoundException(command.userId()));
-            Payment payment = new Payment(command.description(), command.amount(), userInformation, expense, command.dueDate());
+            Payment payment = new Payment(command.description(), command.amount(), userInformation, expense);
             payment = paymentRepository.save(payment);
             return payment.getId();
         }).orElseThrow(() -> new RuntimeException("User not found"));

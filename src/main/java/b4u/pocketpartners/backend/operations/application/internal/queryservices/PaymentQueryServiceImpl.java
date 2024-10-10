@@ -47,4 +47,5 @@ public class PaymentQueryServiceImpl implements PaymentQueryService {
     public List<Payment> handle(GetAllPaymentsByUserIdAndStatusQuery query){
         return paymentRepository.findAllByUserInformationIdAndStatus(query.userInformationId(), query.status());
     }
+
 }

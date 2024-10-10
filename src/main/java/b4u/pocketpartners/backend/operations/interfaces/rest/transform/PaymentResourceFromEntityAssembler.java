@@ -5,6 +5,6 @@ import b4u.pocketpartners.backend.operations.interfaces.rest.resources.PaymentRe
 
 public class PaymentResourceFromEntityAssembler {
     public static PaymentResource toResourceFromEntity(Payment payment) {
-        return new PaymentResource(payment.getId(), payment.getDescription(), payment.getAmount(), payment.getStatus(), payment.getUserInformation().getId(), payment.getExpense().getId(), payment.getDueDate());
+        return new PaymentResource(payment.getId(), payment.getDescription(), payment.getAmount(), payment.getStatus(), payment.getUserInformation().getId(), payment.getExpense().getId());
     }
 }
