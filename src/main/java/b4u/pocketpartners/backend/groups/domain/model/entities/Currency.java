@@ -71,6 +71,6 @@ public class Currency {
      * @return A list of valid Currencies.
      */
     public static List<Currency> validateCurrencySet() {
-        return List.of(new Currency(Currencies.PEN), new Currency(Currencies.USD), new Currency(Currencies.EUR), new Currency(Currencies.YEN));
+        return List.of(new Currency(Currencies.PEN), new Currency(Currencies.USD));
     }
 }

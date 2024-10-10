@@ -6,8 +6,5 @@ package b4u.pocketpartners.backend.groups.domain.model.valueobjects;
  */
 public enum Currencies {
     PEN,  // Peruvian Sol
-    USD,  // United States Dollar
-    EUR,  // Euro
-    YEN,
-    ; // Japanese Yen
+    USD  // United States Dollar
 }
